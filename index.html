@@ -5,9 +5,9 @@
 	<!-- include three.js library -->
 	<script src="https://cdn.jsdelivr.net/gh/stemkoski/AR-Examples/js/three.js"></script>
 	<!-- include jsartookit -->
-  <script src="https://cdn.jsdelivr.net/gh/stemkoski/AR-Examples/js/OBJLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/stemkoski/AR-Examples/js/MTLLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/stemkoski/AR-Examples/jsartoolkit5/artoolkit.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/gh/stemkoski/AR-Examples/js/OBJLoader.js"></script>
+  	<script src="https://cdn.jsdelivr.net/gh/stemkoski/AR-Examples/js/MTLLoader.js"></script>
+  	<script src="https://cdn.jsdelivr.net/gh/stemkoski/AR-Examples/jsartoolkit5/artoolkit.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/stemkoski/AR-Examples/jsartoolkit5/artoolkit.api.js"></script>
 	<!-- include threex.artoolkit -->
 	<script src="https://cdn.jsdelivr.net/gh/stemkoski/AR-Examples/threex/threex-artoolkitsource.js"></script>
@@ -113,7 +113,7 @@ function initialize()
 	markerRoot1 = new THREE.Group();
 	scene.add(markerRoot1);
 	let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
-		type: 'pattern', patternUrl: "marker/hiro.patt",
+		type: 'pattern', patternUrl: "./markers/marker.patt",
 
 			});
 
@@ -179,13 +179,13 @@ function initialize()
 	function onProgress(xhr) { console.log( (xhr.loaded / xhr.total * 100) + '% loaded' ); }
 	function onError(xhr) { console.log( 'An error happened' ); }
 	new THREE.MTLLoader()
-		.setPath( 'model/' )
-		.load( 'Colin-debout_AR.mtl', function ( materials ) {
+		.setPath( './models/' )
+		.load( 'model.mtl', function ( materials ) {
 			materials.preload();
 			new THREE.OBJLoader()
 				.setMaterials( materials )
-				.setPath( 'model/' )
-				.load( 'Colin-debout_AR.obj', function ( group ) {
+				.setPath( './models/' )
+				.load( 'model.obj', function ( group ) {
 					mesh0 = group.children[0];
 					mesh0.material.side = THREE.DoubleSide;
 					mesh0.position.y = 0;
