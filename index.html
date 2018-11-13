@@ -137,20 +137,20 @@ function initialize()
 				// shadowMesh.receiveShadow = true;
 				// sceneGroup.add( shadowMesh );
 
-				let floorGeometry = new THREE.PlaneGeometry( 100,100 );
-				let floorMaterial = new THREE.ShadowMaterial();
-				floorMaterial.opacity = 0.3;
-				let floorMesh = new THREE.Mesh( floorGeometry, floorMaterial );
-				floorMesh.rotation.x = -Math.PI/1;
-				floorMesh.position.set(0, 0, 5.5);
-				floorMesh.receiveShadow = true;
-				sceneGroup.add( floorMesh );
+				//let floorGeometry = new THREE.PlaneGeometry( 100,100 );
+				//let floorMaterial = new THREE.ShadowMaterial();
+				//floorMaterial.opacity = 0.3;
+				//let floorMesh = new THREE.Mesh( floorGeometry, floorMaterial );
+				//floorMesh.rotation.x = -Math.PI/1;
+				//floorMesh.position.set(0, 0, 5.5);
+				//floorMesh.receiveShadow = true;
+				//sceneGroup.add( floorMesh );
 
 
-				let light = new THREE.PointLight( 0xfbf9da, 0.5, 100 );
-				light.position.set( 4, 0, -15 ); // default; light shining from top
-				light.castShadow = true;
-				sceneGroup.add( light );
+				//let light = new THREE.PointLight( 0xfbf9da, 0.5, 100 );
+				//light.position.set( 4, 0, -15 ); // default; light shining from top
+				//light.castShadow = true;
+				//sceneGroup.add( light );
 
 				//Boule pour indiquer l'emplacement de la lumiere, à supprimer en prod
 				// let lightSphere = new THREE.Mesh(
