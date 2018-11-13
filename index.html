@@ -181,7 +181,7 @@ function initialize()
 	function onError(xhr) { console.log( 'An error happened' ); }
 	new THREE.MTLLoader()
 		.setPath( './models/' )
-		.load( 'soldat_soir.mtl', function ( materials ) {
+		.load( 'soldat_soir_CODE.mtl', function ( materials ) {
 			materials.preload();
 			new THREE.OBJLoader()
 				.setMaterials( materials )
