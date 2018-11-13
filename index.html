@@ -181,12 +181,12 @@ function initialize()
 	function onError(xhr) { console.log( 'An error happened' ); }
 	new THREE.MTLLoader()
 		.setPath( './models/' )
-		.load( 'soldat_derder_F.mtl', function ( materials ) {
+		.load( 'soldat_soir.mtl', function ( materials ) {
 			materials.preload();
 			new THREE.OBJLoader()
 				.setMaterials( materials )
 				.setPath( './models/' )
-				.load( 'soldat_derder_F.obj', function ( group ) {
+				.load( 'soldat_soir_CODE.obj', function ( group ) {
 					mesh0 = group.children[0];
 					mesh0.material.side = THREE.DoubleSide;
 					mesh0.position.y = 0;
