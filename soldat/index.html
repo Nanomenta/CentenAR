@@ -142,8 +142,8 @@ function initialize()
 				let ambientLight = new THREE.AmbientLight( 0xeee6ce );
 				ambientLight.castShadow = true;
 				sceneGroup.add( ambientLight );
-				let helper = new THREE.CameraHelper( light.shadow.camera );
-				sceneGroup.add( helper );
+				//let helper = new THREE.CameraHelper( light.shadow.camera );
+				//sceneGroup.add( helper );
   
 	function onProgress(xhr) { console.log( (xhr.loaded / xhr.total * 100) + '% loaded' ); }
 	function onError(xhr) { console.log( 'An error happened' ); }
